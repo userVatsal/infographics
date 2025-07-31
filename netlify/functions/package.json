@@ -1,0 +1,10 @@
+{
+  "name": "infographai-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for InfographAI",
+  "main": "process-article.js",
+  "dependencies": {
+    "@mozilla/readability": "^0.4.4",
+    "jsdom": "^22.1.0"
+  }
+} 

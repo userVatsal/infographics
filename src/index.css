@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', 'Helvetica Neue', 'Roboto', sans-serif;
+  }
+}
+
+@layer components {
+  .consulting-card {
+    @apply bg-white rounded-lg shadow-consulting border border-gray-100;
+  }
+  
+  .consulting-button {
+    @apply bg-consulting-navy text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-consulting-blue focus:ring-offset-2;
+  }
+  
+  .consulting-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-consulting-blue focus:border-transparent outline-none transition-all duration-200;
+  }
+} 
