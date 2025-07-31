@@ -167,12 +167,15 @@ ${articleContent.substring(0, 8000)}...`
 
   } catch (error) {
     console.error('Processing error:', error);
+    console.error('Error stack:', error.stack);
     return {
       statusCode: 500,
       headers,
       body: JSON.stringify({ 
         error: 'Failed to process article',
-        details: error.message 
+        details: error.message,
+        type: error.constructor.name,
+        stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
       }),
     };
   }
